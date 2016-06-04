@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="h89-SG-c9R">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Arena Controller-->
+        <scene sceneID="CTQ-Uv-DAa">
+            <objects>
+                <viewController id="hs9-f6-bCV" customClass="MMArenaController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fiY-nJ-1vf"/>
+                        <viewControllerLayoutGuide type="bottom" id="TLF-m8-PUf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Wk-iq-Y4Z">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2MQ-cG-Lkr">
+                                <rect key="frame" x="0.0" y="373" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" id="CzO-yt-34t"/>
+                                </items>
+                                <color key="barTintColor" red="0.59850036210000002" green="1" blue="0.64005333939999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2MQ-cG-Lkr" firstAttribute="leading" secondItem="9Wk-iq-Y4Z" secondAttribute="leading" id="X23-iN-dH8"/>
+                            <constraint firstItem="2MQ-cG-Lkr" firstAttribute="top" secondItem="fiY-nJ-1vf" secondAttribute="bottom" constant="309" id="nee-mw-bk5"/>
+                            <constraint firstAttribute="trailing" secondItem="2MQ-cG-Lkr" secondAttribute="trailing" id="v9e-EC-tie"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zvX-t7-T3C">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Em2-Pl-Le9">
+                            <rect key="frame" x="220" y="7" width="160" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="足球"/>
+                                <segment title="篮球"/>
+                            </segments>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segment" destination="Em2-Pl-Le9" id="FNI-dc-xYL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z2N-4I-2d5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1346" y="402"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="izv-Fy-cBk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h89-SG-c9R" customClass="MMNavigationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QGZ-BM-Mj3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hs9-f6-bCV" kind="relationship" relationship="rootViewController" id="5Vm-wM-owL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hoS-aC-IIr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="534" y="402"/>
+        </scene>
+    </scenes>
+</document>
